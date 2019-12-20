@@ -8,26 +8,57 @@
 
 /* Begin PBXBuildFile section */
 		70E9565923AD21E300F7CF4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E9565823AD21E300F7CF4E /* AppDelegate.swift */; };
-		70E9565B23AD21E300F7CF4E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E9565A23AD21E300F7CF4E /* SceneDelegate.swift */; };
-		70E9565D23AD21E300F7CF4E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E9565C23AD21E300F7CF4E /* ViewController.swift */; };
 		70E9566023AD21E300F7CF4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70E9565E23AD21E300F7CF4E /* Main.storyboard */; };
 		70E9566223AD21E500F7CF4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70E9566123AD21E500F7CF4E /* Assets.xcassets */; };
 		70E9566523AD21E500F7CF4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70E9566323AD21E500F7CF4E /* LaunchScreen.storyboard */; };
+		70E9566D23AD2D0B00F7CF4E /* AccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E9566C23AD2D0B00F7CF4E /* AccountManager.swift */; };
+		70E9566F23AD2DC900F7CF4E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E9566E23AD2DC900F7CF4E /* LoginViewController.swift */; };
+		70E9567123AD2E0400F7CF4E /* LandingScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E9567023AD2E0400F7CF4E /* LandingScreenViewController.swift */; };
+		70E9567523AD2EB900F7CF4E /* CryptoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E9567423AD2EB900F7CF4E /* CryptoModel.swift */; };
+		70E9568023AD2FE900F7CF4E /* MaticAssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E9567F23AD2FE900F7CF4E /* MaticAssignmentTests.swift */; };
+		70E9568923AD330900F7CF4E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E9568823AD330900F7CF4E /* HomeViewController.swift */; };
+		70E9568C23AD34E000F7CF4E /* CryptoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E9568A23AD34E000F7CF4E /* CryptoTableViewCell.swift */; };
+		70E9568D23AD34E000F7CF4E /* CryptoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70E9568B23AD34E000F7CF4E /* CryptoTableViewCell.xib */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		70E9568223AD2FE900F7CF4E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 70E9564D23AD21E300F7CF4E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 70E9565423AD21E300F7CF4E;
+			remoteInfo = MaticAssignment;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		70E9565523AD21E300F7CF4E /* MaticAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MaticAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70E9565823AD21E300F7CF4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		70E9565A23AD21E300F7CF4E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		70E9565C23AD21E300F7CF4E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		70E9565F23AD21E300F7CF4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		70E9566123AD21E500F7CF4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		70E9566423AD21E500F7CF4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		70E9566623AD21E500F7CF4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70E9566C23AD2D0B00F7CF4E /* AccountManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountManager.swift; sourceTree = "<group>"; };
+		70E9566E23AD2DC900F7CF4E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		70E9567023AD2E0400F7CF4E /* LandingScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingScreenViewController.swift; sourceTree = "<group>"; };
+		70E9567423AD2EB900F7CF4E /* CryptoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoModel.swift; sourceTree = "<group>"; };
+		70E9567D23AD2FE900F7CF4E /* MaticAssignmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MaticAssignmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		70E9567F23AD2FE900F7CF4E /* MaticAssignmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaticAssignmentTests.swift; sourceTree = "<group>"; };
+		70E9568123AD2FE900F7CF4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70E9568823AD330900F7CF4E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		70E9568A23AD34E000F7CF4E /* CryptoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoTableViewCell.swift; sourceTree = "<group>"; };
+		70E9568B23AD34E000F7CF4E /* CryptoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CryptoTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		70E9565223AD21E300F7CF4E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70E9567A23AD2FE900F7CF4E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				70E9565723AD21E300F7CF4E /* MaticAssignment */,
+				70E9567E23AD2FE900F7CF4E /* MaticAssignmentTests */,
 				70E9565623AD21E300F7CF4E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				70E9565523AD21E300F7CF4E /* MaticAssignment.app */,
+				70E9567D23AD2FE900F7CF4E /* MaticAssignmentTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,15 +89,61 @@
 		70E9565723AD21E300F7CF4E /* MaticAssignment */ = {
 			isa = PBXGroup;
 			children = (
+				70E9567623AD2EC000F7CF4E /* Models */,
+				70E9568723AD32E700F7CF4E /* CryptoViews */,
+				70E9567323AD2E2800F7CF4E /* AccountManager */,
+				70E9567223AD2E0E00F7CF4E /* ViewControllers */,
 				70E9565823AD21E300F7CF4E /* AppDelegate.swift */,
-				70E9565A23AD21E300F7CF4E /* SceneDelegate.swift */,
-				70E9565C23AD21E300F7CF4E /* ViewController.swift */,
 				70E9565E23AD21E300F7CF4E /* Main.storyboard */,
 				70E9566123AD21E500F7CF4E /* Assets.xcassets */,
 				70E9566323AD21E500F7CF4E /* LaunchScreen.storyboard */,
 				70E9566623AD21E500F7CF4E /* Info.plist */,
 			);
 			path = MaticAssignment;
+			sourceTree = "<group>";
+		};
+		70E9567223AD2E0E00F7CF4E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				70E9567023AD2E0400F7CF4E /* LandingScreenViewController.swift */,
+				70E9566E23AD2DC900F7CF4E /* LoginViewController.swift */,
+				70E9568823AD330900F7CF4E /* HomeViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		70E9567323AD2E2800F7CF4E /* AccountManager */ = {
+			isa = PBXGroup;
+			children = (
+				70E9566C23AD2D0B00F7CF4E /* AccountManager.swift */,
+			);
+			path = AccountManager;
+			sourceTree = "<group>";
+		};
+		70E9567623AD2EC000F7CF4E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				70E9567423AD2EB900F7CF4E /* CryptoModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		70E9567E23AD2FE900F7CF4E /* MaticAssignmentTests */ = {
+			isa = PBXGroup;
+			children = (
+				70E9567F23AD2FE900F7CF4E /* MaticAssignmentTests.swift */,
+				70E9568123AD2FE900F7CF4E /* Info.plist */,
+			);
+			path = MaticAssignmentTests;
+			sourceTree = "<group>";
+		};
+		70E9568723AD32E700F7CF4E /* CryptoViews */ = {
+			isa = PBXGroup;
+			children = (
+				70E9568A23AD34E000F7CF4E /* CryptoTableViewCell.swift */,
+				70E9568B23AD34E000F7CF4E /* CryptoTableViewCell.xib */,
+			);
+			path = CryptoViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -87,6 +166,24 @@
 			productReference = 70E9565523AD21E300F7CF4E /* MaticAssignment.app */;
 			productType = "com.apple.product-type.application";
 		};
+		70E9567C23AD2FE900F7CF4E /* MaticAssignmentTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 70E9568423AD2FE900F7CF4E /* Build configuration list for PBXNativeTarget "MaticAssignmentTests" */;
+			buildPhases = (
+				70E9567923AD2FE900F7CF4E /* Sources */,
+				70E9567A23AD2FE900F7CF4E /* Frameworks */,
+				70E9567B23AD2FE900F7CF4E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				70E9568323AD2FE900F7CF4E /* PBXTargetDependency */,
+			);
+			name = MaticAssignmentTests;
+			productName = MaticAssignmentTests;
+			productReference = 70E9567D23AD2FE900F7CF4E /* MaticAssignmentTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -99,6 +196,10 @@
 				TargetAttributes = {
 					70E9565423AD21E300F7CF4E = {
 						CreatedOnToolsVersion = 11.1;
+					};
+					70E9567C23AD2FE900F7CF4E = {
+						CreatedOnToolsVersion = 11.1;
+						TestTargetID = 70E9565423AD21E300F7CF4E;
 					};
 				};
 			};
@@ -116,6 +217,7 @@
 			projectRoot = "";
 			targets = (
 				70E9565423AD21E300F7CF4E /* MaticAssignment */,
+				70E9567C23AD2FE900F7CF4E /* MaticAssignmentTests */,
 			);
 		};
 /* End PBXProject section */
@@ -125,9 +227,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70E9568D23AD34E000F7CF4E /* CryptoTableViewCell.xib in Resources */,
 				70E9566523AD21E500F7CF4E /* LaunchScreen.storyboard in Resources */,
 				70E9566223AD21E500F7CF4E /* Assets.xcassets in Resources */,
 				70E9566023AD21E300F7CF4E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70E9567B23AD2FE900F7CF4E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,13 +248,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70E9565D23AD21E300F7CF4E /* ViewController.swift in Sources */,
+				70E9568C23AD34E000F7CF4E /* CryptoTableViewCell.swift in Sources */,
+				70E9567123AD2E0400F7CF4E /* LandingScreenViewController.swift in Sources */,
+				70E9567523AD2EB900F7CF4E /* CryptoModel.swift in Sources */,
 				70E9565923AD21E300F7CF4E /* AppDelegate.swift in Sources */,
-				70E9565B23AD21E300F7CF4E /* SceneDelegate.swift in Sources */,
+				70E9566F23AD2DC900F7CF4E /* LoginViewController.swift in Sources */,
+				70E9568923AD330900F7CF4E /* HomeViewController.swift in Sources */,
+				70E9566D23AD2D0B00F7CF4E /* AccountManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70E9567923AD2FE900F7CF4E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70E9568023AD2FE900F7CF4E /* MaticAssignmentTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		70E9568323AD2FE900F7CF4E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 70E9565423AD21E300F7CF4E /* MaticAssignment */;
+			targetProxy = 70E9568223AD2FE900F7CF4E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		70E9565E23AD21E300F7CF4E /* Main.storyboard */ = {
@@ -316,6 +446,46 @@
 			};
 			name = Release;
 		};
+		70E9568523AD2FE900F7CF4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QEC4NN9HR9;
+				INFOPLIST_FILE = MaticAssignmentTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = app.MaticAssignmentTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MaticAssignment.app/MaticAssignment";
+			};
+			name = Debug;
+		};
+		70E9568623AD2FE900F7CF4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QEC4NN9HR9;
+				INFOPLIST_FILE = MaticAssignmentTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = app.MaticAssignmentTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MaticAssignment.app/MaticAssignment";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -333,6 +503,15 @@
 			buildConfigurations = (
 				70E9566A23AD21E500F7CF4E /* Debug */,
 				70E9566B23AD21E500F7CF4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		70E9568423AD2FE900F7CF4E /* Build configuration list for PBXNativeTarget "MaticAssignmentTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70E9568523AD2FE900F7CF4E /* Debug */,
+				70E9568623AD2FE900F7CF4E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
