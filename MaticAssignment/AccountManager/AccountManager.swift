@@ -60,7 +60,7 @@ class AccountManager {
         }
     }
     
-    func retrieveAccountFromKeyChain(passOrHash: String) -> [String: Any]? {
+    func retrieveAccountFromKeyChain() -> [String: Any]? {
         guard let creds = credentials else {
             return nil
         }

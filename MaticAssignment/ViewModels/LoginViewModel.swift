@@ -13,7 +13,7 @@ class LoginViewModel {
         let credentials = Credentials(username: user, password: password)
         let acctManager = AccountManager.shared
         acctManager.credentials = credentials
-        if let dict = acctManager.retrieveAccountFromKeyChain(passOrHash: "pass") {
+        if let dict = acctManager.retrieveAccountFromKeyChain() {
             print("Retrieved account user : \(dict)")
             return true
         }

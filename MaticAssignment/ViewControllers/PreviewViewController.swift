@@ -10,6 +10,15 @@ import UIKit
 
 class PreviewViewController: UIViewController {
 
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var cryptoNameLabel: UILabel!
+    
+    static func get() -> PreviewViewController {
+        let storyboard = UIStoryboard(name: MAIN_STORYBOARD, bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: PreviewViewController.name) as! PreviewViewController
+        return controller
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

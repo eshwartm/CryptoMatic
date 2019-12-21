@@ -48,7 +48,8 @@ class HomeViewController: UIViewController {
 }
 
 // UITableViewControllerPreviewingDelegate
-extension HomeViewController: UITableViewDataSource, UITableViewDelegate, UIViewControllerPreviewingDelegate {
+extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
+    
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -66,8 +67,25 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate, UIView
         return cell
     }
     
-    func tableView(_ tableView: UITableView, previewForHighlightingContextMenuWithConfiguration configuration: UIContextMenuConfiguration) -> UITargetedPreview? {
-        
+    func tableView(_ tableView: UITableView, contextMenuConfigurationForRowAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
+        let cellData = self.viewModel.cryptoItemAtIndex(index: indexPath.row)!
+        let cryptoName = cellData.name
+        let imgName = cellData.symbol.lowercased()
+        let configuration = UIContextMenuConfiguration(identifier: nil, previewProvider: { [unowned self] () -> UIViewController? in
+            // Return Preview View Controller here
+            let previewController = PreviewViewController.get()
+            previewController.loadViewIfNeeded()
+            previewController.imageView.image = UIImage(named: imgName)
+            previewController.cryptoNameLabel.text = cryptoName
+            return previewController
+        }) { _ -> UIMenu? in
+            let action = UIAction(title: "Close") { (action) in
+                
+            }
+            return UIMenu(title: "", image: UIImage(named: cryptoName), identifier: nil, options: [UIMenu.Options.destructive/*, UIMenu.Options.displayInline*/], children: [action])
+        }
+        return configuration
     }
+    
     
 }
