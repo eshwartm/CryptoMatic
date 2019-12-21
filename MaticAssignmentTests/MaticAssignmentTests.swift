@@ -18,6 +18,10 @@ class MaticAssignmentTests: XCTestCase {
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
+    
+    func testSuccessfullyEncryptDecryptWithAES() {
+        
+    }
 
     func test_GivenUserNamePass_Login() {
         
@@ -26,5 +30,10 @@ class MaticAssignmentTests: XCTestCase {
     func test_GivenLoggedInUser_SeeHash() {
         
     }
+    
+    func test_GenerateRandomHashWith20Chars() {
+        
+    }
 
+    
 }

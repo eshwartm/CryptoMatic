@@ -10,26 +10,54 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    @IBOutlet weak var showHashButton: UIButton!
+    @IBOutlet weak var homeTableView: UITableView!
+    
+    var viewModel = HomeViewModel()
+    
     class func get() -> HomeViewController {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        return storyboard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+        let storyboard = UIStoryboard(name: MAIN_STORYBOARD, bundle: nil)
+        return storyboard.instantiateViewController(withIdentifier: HomeViewController.name) as! HomeViewController
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        homeTableView.delegate = self
+        homeTableView.dataSource = self
+        homeTableView.tableFooterView = UIView(frame: .zero)
+        homeTableView.register(CryptoTableViewCell.cryptoTableViewCellNib,
+                               forCellReuseIdentifier: CryptoTableViewCell.identifier)
+        setupBindingAndGetCryptos()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func showHashButtonPressed(_ sender: UIButton) {
+        
     }
-    */
+    
+    func setupBindingAndGetCryptos() {
+        viewModel.cryptos.bind { [unowned self] (cryptos) in
+            self.homeTableView.reloadData()
+        }
+    }
+}
 
+extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.cryptosCount
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = homeTableView.dequeueReusableCell(withIdentifier: CryptoTableViewCell.identifier, for: indexPath) as? CryptoTableViewCell else {
+            return UITableViewCell()
+        }
+        cell.configureCellWithViewModel(crypto: viewModel.cryptoItemAtIndex(index: indexPath.row) ?? nil)
+        return cell
+    }
 }

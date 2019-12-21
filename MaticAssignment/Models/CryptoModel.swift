@@ -8,7 +8,8 @@
 
 import Foundation
 
-struct CryptoModel {
-    var iconName: String
+struct CryptoModel: Codable {
+    var color: String
     var name: String
+    var symbol: String
 }

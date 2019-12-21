@@ -1,0 +1,20 @@
+PODS:
+  - CryptoSwift (1.1.2)
+  - SwiftKeychainWrapper (3.4.0)
+
+DEPENDENCIES:
+  - CryptoSwift (~> 1.0)
+  - SwiftKeychainWrapper
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - CryptoSwift
+    - SwiftKeychainWrapper
+
+SPEC CHECKSUMS:
+  CryptoSwift: 31dacd1f13427439ddae5b5cbaae4c8dbc43047e
+  SwiftKeychainWrapper: 6fc49fbf7d4a6b0772917acb0e53a1639f6078d6
+
+PODFILE CHECKSUM: 376ba85a58388063549fd27ffbcb0d0cd0eb2c9a
+
+COCOAPODS: 1.5.3

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13B3F099A5A15E9F135DCBAB /* Pods_MaticAssignmentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02857D7DDE6D5ABC6FA13E5B /* Pods_MaticAssignmentTests.framework */; };
 		70E9565923AD21E300F7CF4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E9565823AD21E300F7CF4E /* AppDelegate.swift */; };
 		70E9566023AD21E300F7CF4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70E9565E23AD21E300F7CF4E /* Main.storyboard */; };
 		70E9566223AD21E500F7CF4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70E9566123AD21E500F7CF4E /* Assets.xcassets */; };
@@ -19,6 +20,18 @@
 		70E9568923AD330900F7CF4E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E9568823AD330900F7CF4E /* HomeViewController.swift */; };
 		70E9568C23AD34E000F7CF4E /* CryptoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E9568A23AD34E000F7CF4E /* CryptoTableViewCell.swift */; };
 		70E9568D23AD34E000F7CF4E /* CryptoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70E9568B23AD34E000F7CF4E /* CryptoTableViewCell.xib */; };
+		70E9569223AD40C900F7CF4E /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E9569123AD40C900F7CF4E /* LoginViewModel.swift */; };
+		70E9569423AD40D500F7CF4E /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E9569323AD40D500F7CF4E /* HomeViewModel.swift */; };
+		70E9569623ADD65E00F7CF4E /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E9569523ADD65E00F7CF4E /* Credentials.swift */; };
+		70E9569A23ADE54500F7CF4E /* AESCipher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E9569923ADE54500F7CF4E /* AESCipher.swift */; };
+		70E9569C23AE2A8F00F7CF4E /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E9569B23AE2A8F00F7CF4E /* NSObjectExtension.swift */; };
+		70E9569E23AE2B4100F7CF4E /* CryptoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E9569D23AE2B4100F7CF4E /* CryptoViewModel.swift */; };
+		70E956A023AE2D4D00F7CF4E /* crypto.json in Resources */ = {isa = PBXBuildFile; fileRef = 70E9569F23AE2D4D00F7CF4E /* crypto.json */; };
+		70E956A223AE7C8F00F7CF4E /* crypto1.json in Resources */ = {isa = PBXBuildFile; fileRef = 70E956A123AE7C8F00F7CF4E /* crypto1.json */; };
+		70E956A523AE80BB00F7CF4E /* BindingListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E956A423AE80BB00F7CF4E /* BindingListener.swift */; };
+		70E956A723AE854200F7CF4E /* AlertUIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E956A623AE854200F7CF4E /* AlertUIViewControllerExtension.swift */; };
+		70E956A923AE8B0600F7CF4E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E956A823AE8B0600F7CF4E /* Constants.swift */; };
+		B4450F4F67980147F6660778 /* Pods_MaticAssignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9DF2BC45AFB2368F6978707 /* Pods_MaticAssignment.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +45,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02857D7DDE6D5ABC6FA13E5B /* Pods_MaticAssignmentTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MaticAssignmentTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		26F5E774178673AFE4A22BD9 /* Pods-MaticAssignmentTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MaticAssignmentTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MaticAssignmentTests/Pods-MaticAssignmentTests.release.xcconfig"; sourceTree = "<group>"; };
+		45125E0B9F928185A3686DE8 /* Pods-MaticAssignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MaticAssignment.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MaticAssignment/Pods-MaticAssignment.debug.xcconfig"; sourceTree = "<group>"; };
 		70E9565523AD21E300F7CF4E /* MaticAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MaticAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70E9565823AD21E300F7CF4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70E9565F23AD21E300F7CF4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -48,6 +64,21 @@
 		70E9568823AD330900F7CF4E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		70E9568A23AD34E000F7CF4E /* CryptoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoTableViewCell.swift; sourceTree = "<group>"; };
 		70E9568B23AD34E000F7CF4E /* CryptoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CryptoTableViewCell.xib; sourceTree = "<group>"; };
+		70E9569123AD40C900F7CF4E /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		70E9569323AD40D500F7CF4E /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		70E9569523ADD65E00F7CF4E /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
+		70E9569723ADE4E200F7CF4E /* MaticAssignment-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MaticAssignment-Bridging-Header.h"; sourceTree = "<group>"; };
+		70E9569923ADE54500F7CF4E /* AESCipher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AESCipher.swift; sourceTree = "<group>"; };
+		70E9569B23AE2A8F00F7CF4E /* NSObjectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
+		70E9569D23AE2B4100F7CF4E /* CryptoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoViewModel.swift; sourceTree = "<group>"; };
+		70E9569F23AE2D4D00F7CF4E /* crypto.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = crypto.json; sourceTree = "<group>"; };
+		70E956A123AE7C8F00F7CF4E /* crypto1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = crypto1.json; sourceTree = "<group>"; };
+		70E956A423AE80BB00F7CF4E /* BindingListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingListener.swift; sourceTree = "<group>"; };
+		70E956A623AE854200F7CF4E /* AlertUIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertUIViewControllerExtension.swift; sourceTree = "<group>"; };
+		70E956A823AE8B0600F7CF4E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C4460BC2309D32C50B98038F /* Pods-MaticAssignmentTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MaticAssignmentTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MaticAssignmentTests/Pods-MaticAssignmentTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D9DF2BC45AFB2368F6978707 /* Pods_MaticAssignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MaticAssignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5FD8080CE7EDB82B5D65929 /* Pods-MaticAssignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MaticAssignment.release.xcconfig"; path = "Pods/Target Support Files/Pods-MaticAssignment/Pods-MaticAssignment.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4450F4F67980147F6660778 /* Pods_MaticAssignment.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,18 +94,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13B3F099A5A15E9F135DCBAB /* Pods_MaticAssignmentTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		41CA1A4E79370676192E7FD6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D9DF2BC45AFB2368F6978707 /* Pods_MaticAssignment.framework */,
+				02857D7DDE6D5ABC6FA13E5B /* Pods_MaticAssignmentTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		70E9564C23AD21E300F7CF4E = {
 			isa = PBXGroup;
 			children = (
 				70E9565723AD21E300F7CF4E /* MaticAssignment */,
 				70E9567E23AD2FE900F7CF4E /* MaticAssignmentTests */,
 				70E9565623AD21E300F7CF4E /* Products */,
+				A41C9EB9B349ECD5CF4BA8C4 /* Pods */,
+				41CA1A4E79370676192E7FD6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -89,6 +133,9 @@
 		70E9565723AD21E300F7CF4E /* MaticAssignment */ = {
 			isa = PBXGroup;
 			children = (
+				70E956A323AE808C00F7CF4E /* Utils */,
+				70E9569823ADE50800F7CF4E /* AES256 */,
+				70E9568E23AD40A100F7CF4E /* ViewModels */,
 				70E9567623AD2EC000F7CF4E /* Models */,
 				70E9568723AD32E700F7CF4E /* CryptoViews */,
 				70E9567323AD2E2800F7CF4E /* AccountManager */,
@@ -98,6 +145,9 @@
 				70E9566123AD21E500F7CF4E /* Assets.xcassets */,
 				70E9566323AD21E500F7CF4E /* LaunchScreen.storyboard */,
 				70E9566623AD21E500F7CF4E /* Info.plist */,
+				70E9569723ADE4E200F7CF4E /* MaticAssignment-Bridging-Header.h */,
+				70E9569F23AE2D4D00F7CF4E /* crypto.json */,
+				70E956A123AE7C8F00F7CF4E /* crypto1.json */,
 			);
 			path = MaticAssignment;
 			sourceTree = "<group>";
@@ -124,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				70E9567423AD2EB900F7CF4E /* CryptoModel.swift */,
+				70E9569523ADD65E00F7CF4E /* Credentials.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -146,6 +197,46 @@
 			path = CryptoViews;
 			sourceTree = "<group>";
 		};
+		70E9568E23AD40A100F7CF4E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				70E9569123AD40C900F7CF4E /* LoginViewModel.swift */,
+				70E9569323AD40D500F7CF4E /* HomeViewModel.swift */,
+				70E9569D23AE2B4100F7CF4E /* CryptoViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		70E9569823ADE50800F7CF4E /* AES256 */ = {
+			isa = PBXGroup;
+			children = (
+				70E9569923ADE54500F7CF4E /* AESCipher.swift */,
+			);
+			path = AES256;
+			sourceTree = "<group>";
+		};
+		70E956A323AE808C00F7CF4E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				70E9569B23AE2A8F00F7CF4E /* NSObjectExtension.swift */,
+				70E956A423AE80BB00F7CF4E /* BindingListener.swift */,
+				70E956A623AE854200F7CF4E /* AlertUIViewControllerExtension.swift */,
+				70E956A823AE8B0600F7CF4E /* Constants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		A41C9EB9B349ECD5CF4BA8C4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				45125E0B9F928185A3686DE8 /* Pods-MaticAssignment.debug.xcconfig */,
+				E5FD8080CE7EDB82B5D65929 /* Pods-MaticAssignment.release.xcconfig */,
+				C4460BC2309D32C50B98038F /* Pods-MaticAssignmentTests.debug.xcconfig */,
+				26F5E774178673AFE4A22BD9 /* Pods-MaticAssignmentTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -153,9 +244,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 70E9566923AD21E500F7CF4E /* Build configuration list for PBXNativeTarget "MaticAssignment" */;
 			buildPhases = (
+				200F6C0AA4B1D2DAF1B93BBF /* [CP] Check Pods Manifest.lock */,
 				70E9565123AD21E300F7CF4E /* Sources */,
 				70E9565223AD21E300F7CF4E /* Frameworks */,
 				70E9565323AD21E300F7CF4E /* Resources */,
+				2C825386C84B244C26238684 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -170,6 +263,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 70E9568423AD2FE900F7CF4E /* Build configuration list for PBXNativeTarget "MaticAssignmentTests" */;
 			buildPhases = (
+				FACA0989CF502CF9693A6D17 /* [CP] Check Pods Manifest.lock */,
 				70E9567923AD2FE900F7CF4E /* Sources */,
 				70E9567A23AD2FE900F7CF4E /* Frameworks */,
 				70E9567B23AD2FE900F7CF4E /* Resources */,
@@ -228,6 +322,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				70E9568D23AD34E000F7CF4E /* CryptoTableViewCell.xib in Resources */,
+				70E956A023AE2D4D00F7CF4E /* crypto.json in Resources */,
+				70E956A223AE7C8F00F7CF4E /* crypto1.json in Resources */,
 				70E9566523AD21E500F7CF4E /* LaunchScreen.storyboard in Resources */,
 				70E9566223AD21E500F7CF4E /* Assets.xcassets in Resources */,
 				70E9566023AD21E300F7CF4E /* Main.storyboard in Resources */,
@@ -243,6 +339,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		200F6C0AA4B1D2DAF1B93BBF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MaticAssignment-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2C825386C84B244C26238684 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MaticAssignment/Pods-MaticAssignment-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MaticAssignment/Pods-MaticAssignment-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FACA0989CF502CF9693A6D17 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MaticAssignmentTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		70E9565123AD21E300F7CF4E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -250,11 +405,20 @@
 			files = (
 				70E9568C23AD34E000F7CF4E /* CryptoTableViewCell.swift in Sources */,
 				70E9567123AD2E0400F7CF4E /* LandingScreenViewController.swift in Sources */,
+				70E9569623ADD65E00F7CF4E /* Credentials.swift in Sources */,
+				70E9569423AD40D500F7CF4E /* HomeViewModel.swift in Sources */,
 				70E9567523AD2EB900F7CF4E /* CryptoModel.swift in Sources */,
+				70E9569E23AE2B4100F7CF4E /* CryptoViewModel.swift in Sources */,
 				70E9565923AD21E300F7CF4E /* AppDelegate.swift in Sources */,
+				70E956A923AE8B0600F7CF4E /* Constants.swift in Sources */,
 				70E9566F23AD2DC900F7CF4E /* LoginViewController.swift in Sources */,
+				70E9569A23ADE54500F7CF4E /* AESCipher.swift in Sources */,
+				70E956A523AE80BB00F7CF4E /* BindingListener.swift in Sources */,
+				70E956A723AE854200F7CF4E /* AlertUIViewControllerExtension.swift in Sources */,
 				70E9568923AD330900F7CF4E /* HomeViewController.swift in Sources */,
 				70E9566D23AD2D0B00F7CF4E /* AccountManager.swift in Sources */,
+				70E9569223AD40C900F7CF4E /* LoginViewModel.swift in Sources */,
+				70E9569C23AE2A8F00F7CF4E /* NSObjectExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +576,7 @@
 		};
 		70E9566A23AD21E500F7CF4E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45125E0B9F928185A3686DE8 /* Pods-MaticAssignment.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -423,6 +588,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = app.MaticAssignment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "./$(PROJECT_NAME)/$(SWIFT_MODULE_NAME)-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -430,6 +596,7 @@
 		};
 		70E9566B23AD21E500F7CF4E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5FD8080CE7EDB82B5D65929 /* Pods-MaticAssignment.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -441,6 +608,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = app.MaticAssignment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "./$(PROJECT_NAME)/$(SWIFT_MODULE_NAME)-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -448,6 +616,7 @@
 		};
 		70E9568523AD2FE900F7CF4E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C4460BC2309D32C50B98038F /* Pods-MaticAssignmentTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -468,6 +637,7 @@
 		};
 		70E9568623AD2FE900F7CF4E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26F5E774178673AFE4A22BD9 /* Pods-MaticAssignmentTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;

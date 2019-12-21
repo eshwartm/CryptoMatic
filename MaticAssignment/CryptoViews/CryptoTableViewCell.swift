@@ -10,6 +10,13 @@ import UIKit
 
 class CryptoTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var imgView: UIImageView!
+    @IBOutlet weak var cryptoTitleLabel: UILabel!
+    @IBOutlet weak var cryptoSubtitleLabel: UILabel!
+    
+    static let identifier = CryptoTableViewCell.name
+    static let cryptoTableViewCellNib = UINib(nibName: identifier, bundle: nil)
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -19,6 +26,19 @@ class CryptoTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func configureCellWithViewModel(crypto: CryptoModel?) {
+        guard let crypt = crypto else {
+            cryptoTitleLabel.text = "Title"
+            cryptoSubtitleLabel.text = "Subtitle"
+            imgView.image = UIImage(named: "FavouriteButton")
+            return
+        }
+        let viewModel = CryptoViewModel(crypto: crypt)
+        cryptoTitleLabel.text = viewModel.name
+        cryptoSubtitleLabel.text = viewModel.name
+        imgView.image = UIImage(named: viewModel.iconName)
     }
     
 }

@@ -1,0 +1,23 @@
+"cryptos": [
+    {"symbol": "$PAC", "name": "PACcoin", "color": "#f5eb16"},
+    {"symbol": "0XBTC", "name": "0xBitcoin", "color": "#ff914d"},
+    {"symbol": "2GIVE", "name": "2Give", "color": "#f1cb60"},
+    {"symbol": "ABT", "name": "Arcblock", "color": "#3effff"},
+    {"symbol": "ACT", "name": "Achain", "color": "#767dff"},
+    {"symbol": "ACTN", "name": "Action Coin", "color": "#ffffff"},
+    {"symbol": "ADA", "name": "Cardano", "color": "#0d1e30"},
+    {"symbol": "ADD", "name": "ADD Token", "color": "#fec807"},
+    {"symbol": "ADX", "name": "AdEx", "color": "#1b75bc"},
+    {"symbol": "AE", "name": "Aeternity", "color": "#de3f6b"},
+    {"symbol": "AEON", "name": "Aeon", "color": "#134451"},
+    {"symbol": "AEUR", "name": "Augmint Euro Token", "color": "#051d2d"},
+    {"symbol": "AGI", "name": "SingularityNET", "color": "#6916ff"},
+    {"symbol": "AGRS", "name": "Agoras Tauchain", "color": "#f49e00"},
+    {"symbol": "AION", "name": "Aion", "color": "#00bfec"},
+    {"symbol": "AMB", "name": "Ambrosus", "color": "#3c5be0"},
+    {"symbol": "AMP", "name": "HyperSpace (Synereo)", "color": "#2daee4"},
+    {"symbol": "ANT", "name": "Aragon", "color": "#2cd3e1"},
+    {"symbol": "APPC", "name": "AppCoins", "color": "#fd875e"},
+    {"symbol": "ARDR", "name": "Ardor", "color": "#3c87c7"},
+    {"symbol": "ARG", "name": "Argentum", "color": "#a71435"}
+]
