@@ -32,7 +32,6 @@ class HomeViewModel {
                 print(contents)
                 let tData = contents.data(using: .utf8)!
                 self.cryptos.value = try! JSONDecoder().decode([CryptoModel].self, from: tData)
-                print("Cryptos value updated : \(self.cryptos.value)")
             } catch {
                 // contents could not be loaded
                 print("Could not decode data from json file \(error.localizedDescription)")
@@ -44,7 +43,12 @@ class HomeViewModel {
     
     func retrieveHash() -> String {
         let acctManager = AccountManager.shared
-        let randomHash = acctManager.randomHash?.hexString ?? ""
-        return randomHash
+        if let dict = acctManager.retrieveAccountFromKeyChain() {
+            print("Retrieved account user : \(dict)")
+            if let hashStr = dict["hash"] as? String {
+                return hashStr
+            }
+        }
+        return ""
     }
 }

@@ -32,9 +32,13 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginOrSignUpButtonPressed(_ sender: UIButton) {
         guard let user = userNameTextField.text,
-            let password = passwordTextField.text else {
-                print("Username and password must be entered")
-                return
+              user.count > 0,
+              let password = passwordTextField.text,
+              password.count > 0
+        else
+        {
+            self.showAlertWithTitleAndText(title: "Error", text: "Username and password must be entered.")
+            return
         }
         var success = false
         if let buttonTitle = sender.titleLabel?.text {
@@ -50,10 +54,11 @@ class LoginViewController: UIViewController {
         
         if success {
             let homeVC = HomeViewController.get()
+            homeVC.isModalInPresentation = true
             present(homeVC, animated: true, completion: nil)
         }
         else {
-            self.showAlertWithTitleAndText(title: "Error", text: "Could not fetch account: \(user)")
+            self.showAlertWithTitleAndText(title: "Error", text: "Could not fetch account: \(user). Please sign up.")
         }
     }
     
