@@ -32,7 +32,7 @@ class HomeViewModel {
                 print(contents)
                 let tData = contents.data(using: .utf8)!
                 self.cryptos.value = try! JSONDecoder().decode([CryptoModel].self, from: tData)
-                
+                print("Cryptos value updated : \(self.cryptos.value)")
             } catch {
                 // contents could not be loaded
                 print("Could not decode data from json file \(error.localizedDescription)")

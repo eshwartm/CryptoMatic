@@ -53,7 +53,7 @@ class LoginViewController: UIViewController {
             present(homeVC, animated: true, completion: nil)
         }
         else {
-            self.showAlertWithText(text: "Something went wrong while trying to login")
+            self.showAlertWithTitleAndText(title: "Error", text: "Could not fetch account: \(user)")
         }
     }
     

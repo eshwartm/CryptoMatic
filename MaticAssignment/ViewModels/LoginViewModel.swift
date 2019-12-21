@@ -13,12 +13,12 @@ class LoginViewModel {
         let credentials = Credentials(username: user, password: password)
         let acctManager = AccountManager.shared
         acctManager.credentials = credentials
-        if let data = acctManager.retrieveAccountFromKeyChain(passOrHash: "pass") {
-            print("Retrieved account user : \(data)")
+        if let dict = acctManager.retrieveAccountFromKeyChain(passOrHash: "pass") {
+            print("Retrieved account user : \(dict)")
             return true
         }
         
-        return true
+        return false
     }
     
     func createAccountWith(Username user:String, password: String) -> Bool {
@@ -30,8 +30,7 @@ class LoginViewModel {
         acctManager.credentials = credentials
         
         if let encryptedPass = acctManager.encryptPasswordWithHash() {
-            acctManager.storeUserAndEncryptedPassInKeychain(encryptedPass: encryptedPass)
-            acctManager.storeUserAndRandomHashInKeychain()
+            acctManager.storeUserAndRandomHashAndPassInKeychain(encryptedPassword: encryptedPass)
         }
         return true
     }

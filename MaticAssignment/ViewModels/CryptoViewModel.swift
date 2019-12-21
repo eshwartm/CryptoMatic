@@ -13,11 +13,13 @@ class CryptoViewModel {
     
     let name: String!
     let iconName: String!
+    let cryptoName: String!
     
     init(crypto: CryptoModel) {
         self.crypto = crypto
         
         name = self.crypto.name
+        cryptoName = self.crypto.symbol
         iconName = self.crypto.symbol.lowercased()
     }
     

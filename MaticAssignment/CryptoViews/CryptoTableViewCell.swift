@@ -37,7 +37,7 @@ class CryptoTableViewCell: UITableViewCell {
         }
         let viewModel = CryptoViewModel(crypto: crypt)
         cryptoTitleLabel.text = viewModel.name
-        cryptoSubtitleLabel.text = viewModel.name
+        cryptoSubtitleLabel.text = viewModel.cryptoName
         imgView.image = UIImage(named: viewModel.iconName)
     }
     

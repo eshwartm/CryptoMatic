@@ -33,17 +33,22 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func showHashButtonPressed(_ sender: UIButton) {
-        
+        let hash = viewModel.retrieveHash()
+        let msg = (hash == "") ? "Could not retrieve hash" : hash
+        self.showAlertWithTitleAndText(title: "Message", text: msg)
     }
     
     func setupBindingAndGetCryptos() {
         viewModel.cryptos.bind { [unowned self] (cryptos) in
             self.homeTableView.reloadData()
         }
+        
+        viewModel.getAllCryptos()
     }
 }
 
-extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
+// UITableViewControllerPreviewingDelegate
+extension HomeViewController: UITableViewDataSource, UITableViewDelegate, UIViewControllerPreviewingDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -60,4 +65,9 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         cell.configureCellWithViewModel(crypto: viewModel.cryptoItemAtIndex(index: indexPath.row) ?? nil)
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, previewForHighlightingContextMenuWithConfiguration configuration: UIContextMenuConfiguration) -> UITargetedPreview? {
+        
+    }
+    
 }

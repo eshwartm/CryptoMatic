@@ -31,6 +31,7 @@
 		70E956A523AE80BB00F7CF4E /* BindingListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E956A423AE80BB00F7CF4E /* BindingListener.swift */; };
 		70E956A723AE854200F7CF4E /* AlertUIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E956A623AE854200F7CF4E /* AlertUIViewControllerExtension.swift */; };
 		70E956A923AE8B0600F7CF4E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E956A823AE8B0600F7CF4E /* Constants.swift */; };
+		70E956AB23AEA37600F7CF4E /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E956AA23AEA37600F7CF4E /* PreviewViewController.swift */; };
 		B4450F4F67980147F6660778 /* Pods_MaticAssignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9DF2BC45AFB2368F6978707 /* Pods_MaticAssignment.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +77,7 @@
 		70E956A423AE80BB00F7CF4E /* BindingListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingListener.swift; sourceTree = "<group>"; };
 		70E956A623AE854200F7CF4E /* AlertUIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertUIViewControllerExtension.swift; sourceTree = "<group>"; };
 		70E956A823AE8B0600F7CF4E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		70E956AA23AEA37600F7CF4E /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
 		C4460BC2309D32C50B98038F /* Pods-MaticAssignmentTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MaticAssignmentTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MaticAssignmentTests/Pods-MaticAssignmentTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D9DF2BC45AFB2368F6978707 /* Pods_MaticAssignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MaticAssignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5FD8080CE7EDB82B5D65929 /* Pods-MaticAssignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MaticAssignment.release.xcconfig"; path = "Pods/Target Support Files/Pods-MaticAssignment/Pods-MaticAssignment.release.xcconfig"; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				70E9567023AD2E0400F7CF4E /* LandingScreenViewController.swift */,
 				70E9566E23AD2DC900F7CF4E /* LoginViewController.swift */,
 				70E9568823AD330900F7CF4E /* HomeViewController.swift */,
+				70E956AA23AEA37600F7CF4E /* PreviewViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -406,6 +409,7 @@
 				70E9568C23AD34E000F7CF4E /* CryptoTableViewCell.swift in Sources */,
 				70E9567123AD2E0400F7CF4E /* LandingScreenViewController.swift in Sources */,
 				70E9569623ADD65E00F7CF4E /* Credentials.swift in Sources */,
+				70E956AB23AEA37600F7CF4E /* PreviewViewController.swift in Sources */,
 				70E9569423AD40D500F7CF4E /* HomeViewModel.swift in Sources */,
 				70E9567523AD2EB900F7CF4E /* CryptoModel.swift in Sources */,
 				70E9569E23AE2B4100F7CF4E /* CryptoViewModel.swift in Sources */,

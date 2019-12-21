@@ -42,51 +42,37 @@ class AccountManager {
         }
     }
     
-    func storeUserAndEncryptedPassInKeychain(encryptedPass: Data) {
-        guard let creds = credentials else {
-            return
-        }
-        let account = creds.username
-        let query: [String: Any] = [kSecClass as String: kSecClassGenericPassword,
-                                    kSecAttrAccount as String: account,
-                                    kSecAttrLabel as String: "pass",
-                                    kSecValueData as String: encryptedPass]
-        SecItemAdd(query as CFDictionary, nil)
-    }
-    
-    func storeUserAndRandomHashInKeychain() {
+    func storeUserAndRandomHashAndPassInKeychain(encryptedPassword: Data?) {
         guard let creds = credentials,
+              let encryptedPass = encryptedPassword,
               let hash = randomHash
         else {
             print("Missing credentials or hash")
             return
         }
         let account = creds.username
-        let query: [String: Any] = [kSecClass as String: kSecClassGenericPassword,
-                                    kSecAttrAccount as String: account,
-                                    kSecAttrLabel as String: "hash",
-                                    kSecValueData as String: hash]
-        
-        SecItemAdd(query as CFDictionary, nil)
+        let dict = [
+            "pass": encryptedPass.hexString,
+            "hash": hash.hexString
+        ]
+        if let jsonData = try? JSONSerialization.data(withJSONObject:dict) {
+            KeychainWrapper.standard.set(jsonData, forKey: account)
+        }
     }
     
-    func retrieveAccountFromKeyChain(passOrHash: String) -> Data? {
+    func retrieveAccountFromKeyChain(passOrHash: String) -> [String: Any]? {
         guard let creds = credentials else {
             return nil
         }
         let account = creds.username
-        let query: [String: Any] = [kSecClass as String: kSecClassIdentity,
-                                    kSecAttrAccount as String: account,
-                                    kSecAttrLabel as String: passOrHash]
-        var secureItemValue: AnyObject?
-        let statusCode: OSStatus = SecItemCopyMatching(query as CFDictionary, &secureItemValue)
-        if statusCode == noErr {
-            return secureItemValue as? Data
-        }
-        else {
-            print(statusCode)
+        if let data = KeychainWrapper.standard.data(forKey: account) {
+            if let jsonDict = try? JSONSerialization.jsonObject(with: data, options: [.mutableLeaves, .mutableContainers]) as? [String:Any] {
+                print("Fetched data from keychain : \(jsonDict)")
+                return jsonDict
+            }
             return nil
         }
+        return nil
     }
 }
 
