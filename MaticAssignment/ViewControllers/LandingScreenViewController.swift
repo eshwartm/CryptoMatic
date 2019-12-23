@@ -26,31 +26,19 @@ class LandingScreenViewController: UIViewController {
     }
     
     func setUpLoginViewController(mode: String) -> LoginViewController {
-        let loginVC = LoginViewController.get()
-        loginVC.loadViewIfNeeded()
-        switch mode {
-        case LOGIN_ACTION:
-            loginVC.titleLabel.text = SIGN_IN
-            loginVC.loginOrSignUpButton.setTitle(SIGN_IN, for: .normal)
-        case SIGNUP_ACTION:
-            loginVC.titleLabel.text = CREATE_ACCOUNT
-            loginVC.loginOrSignUpButton.setTitle(CREATE_ACCOUNT, for: .normal)
-        default:
-            loginVC.titleLabel.text = SIGN_IN
-            loginVC.loginOrSignUpButton.setTitle(SIGN_IN, for: .normal)
-        }
+        let loginVC = LoginViewController.get(mode: mode)
         return loginVC
     }
     
     @IBAction func signInButtonPressed(_ sender: UIButton) {
         // get login View controller
         // set title text and button text
-        let loginVC = setUpLoginViewController(mode: LOGIN_ACTION)
+        let loginVC = setUpLoginViewController(mode: SIGN_IN)
         present(loginVC, animated: true, completion: nil)
     }
     
     @IBAction func newAccountButtonPressed(_ sender: UIButton) {
-        let loginVC = setUpLoginViewController(mode: SIGNUP_ACTION)
+        let loginVC = setUpLoginViewController(mode: CREATE_ACCOUNT)
         present(loginVC, animated: true, completion: nil)
     }
 }

@@ -9,9 +9,19 @@
 import Foundation
 
 class HomeViewModel {
+    
+    var credentials: Credentials!
     var cryptos: BindingListener<[CryptoModel]?> = BindingListener(nil)
     var cryptosCount : Int {
         return self.cryptos.value?.count ?? 0
+    }
+    
+    init(credentials: Credentials? = nil) {
+        self.credentials = credentials
+    }
+    
+    var salt: String {
+        return credentials.retrieveSalt()
     }
     
     func cryptoItemAtIndex(index: Int) -> CryptoModel? {
@@ -39,16 +49,5 @@ class HomeViewModel {
         } else {
             print("Could not find file")
         }
-    }
-    
-    func retrieveHash() -> String {
-        let acctManager = AccountManager.shared
-        if let dict = acctManager.retrieveAccountFromKeyChain() {
-            print("Retrieved account user : \(dict)")
-            if let hashStr = dict["hash"] as? String {
-                return hashStr
-            }
-        }
-        return ""
     }
 }

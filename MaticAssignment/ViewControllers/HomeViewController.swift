@@ -13,11 +13,13 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var showHashButton: UIButton!
     @IBOutlet weak var homeTableView: UITableView!
     
-    var viewModel = HomeViewModel()
+    var viewModel: HomeViewModel!
     
-    class func get() -> HomeViewController {
+    class func get(credentials: Credentials) -> HomeViewController {
         let storyboard = UIStoryboard(name: MAIN_STORYBOARD, bundle: nil)
-        return storyboard.instantiateViewController(withIdentifier: HomeViewController.name) as! HomeViewController
+        let homeVC = storyboard.instantiateViewController(withIdentifier: HomeViewController.name) as! HomeViewController
+        homeVC.viewModel = HomeViewModel(credentials: credentials)
+        return homeVC
     }
     
     override func viewDidLoad() {
@@ -33,7 +35,7 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func showHashButtonPressed(_ sender: UIButton) {
-        let hash = viewModel.retrieveHash()
+        let hash = viewModel.salt
         let msg = (hash == "") ? "Could not retrieve hash" : hash
         self.showAlertWithTitleAndText(title: "Message", text: msg)
     }
@@ -71,7 +73,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         let cellData = self.viewModel.cryptoItemAtIndex(index: indexPath.row)!
         let cryptoName = cellData.name
         let imgName = cellData.symbol.lowercased()
-        let configuration = UIContextMenuConfiguration(identifier: nil, previewProvider: { [unowned self] () -> UIViewController? in
+        let configuration = UIContextMenuConfiguration(identifier: nil, previewProvider: { () -> UIViewController? in
             // Return Preview View Controller here
             let previewController = PreviewViewController.get()
             previewController.loadViewIfNeeded()

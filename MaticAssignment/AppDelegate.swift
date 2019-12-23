@@ -25,6 +25,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let landingScreenVC = LandingScreenViewController.get()
         return landingScreenVC
     }
+    
+    func applicationWillTerminate(_ application: UIApplication) {
+//        UserDefaults.standard.removeObject(forKey: USER_NAME)
+    }
 
 }
 

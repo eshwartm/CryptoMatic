@@ -15,11 +15,13 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginOrSignUpButton: UIButton!
     
-    var loginViewModel = LoginViewModel()
+    var loginViewModel: LoginViewModel!
     
-    class func get() -> LoginViewController {
+    class func get(mode: String) -> LoginViewController {
         let storyboard = UIStoryboard(name: MAIN_STORYBOARD, bundle: nil)
-        return storyboard.instantiateViewController(withIdentifier: LoginViewController.name) as! LoginViewController
+        let loginVC = storyboard.instantiateViewController(withIdentifier: LoginViewController.name) as! LoginViewController
+        loginVC.loginViewModel = LoginViewModel(mode: mode)
+        return loginVC
     }
     
     override func viewDidLoad() {
@@ -28,6 +30,18 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         passwordTextField.autocorrectionType = .no
+        
+        switch loginViewModel.mode {
+        case SIGN_IN:
+            self.titleLabel.text = SIGN_IN
+            self.loginOrSignUpButton.setTitle(SIGN_IN, for: .normal)
+        case CREATE_ACCOUNT:
+            self.titleLabel.text = CREATE_ACCOUNT
+            self.loginOrSignUpButton.setTitle(CREATE_ACCOUNT, for: .normal)
+        default:
+            self.titleLabel.text = SIGN_IN
+            self.loginOrSignUpButton.setTitle(SIGN_IN, for: .normal)
+        }
     }
     
     @IBAction func loginOrSignUpButtonPressed(_ sender: UIButton) {
@@ -41,19 +55,19 @@ class LoginViewController: UIViewController {
             return
         }
         var success = false
-        if let buttonTitle = sender.titleLabel?.text {
-            switch buttonTitle {
-            case SIGN_IN:
-                success = retrieveAccountAndLogin(user: user, pass: password)
-            case CREATE_ACCOUNT:
-                success = createAccountAndLogin(user: user, pass: password)
-            default:
-                success = false
-            }
+        let creds = Credentials(user: user, pass: password)
+        switch loginViewModel.mode {
+        case SIGN_IN:
+            success = retrieveAccountAndLogin(credentials: creds)
+        case CREATE_ACCOUNT:
+            success = createAccountAndLogin(credentials: creds)
+        default:
+            success = false
         }
         
+        
         if success {
-            let homeVC = HomeViewController.get()
+            let homeVC = HomeViewController.get(credentials: creds)
             homeVC.isModalInPresentation = true
             present(homeVC, animated: true, completion: nil)
         }
@@ -62,14 +76,14 @@ class LoginViewController: UIViewController {
         }
     }
     
-    func retrieveAccountAndLogin(user: String, pass: String) -> Bool {
-        return loginViewModel.retrieveAccountWithUser(user: user, password: pass)
+    func retrieveAccountAndLogin(credentials: Credentials) -> Bool {
+        return loginViewModel.retrieveAccountWithUser(credentials: credentials)
     }
     
-    func createAccountAndLogin(user: String, pass: String) -> Bool {
-        if loginViewModel.retrieveAccountWithUser(user: user, password: pass) {
+    func createAccountAndLogin(credentials: Credentials) -> Bool {
+        if loginViewModel.retrieveAccountWithUser(credentials: credentials) {
             return true
         }
-        return loginViewModel.createAccountWith(Username: user, password: pass)
+        return loginViewModel.createAccountWith(credentials: credentials)
     }
 }

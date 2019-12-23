@@ -9,26 +9,32 @@
 import Foundation
 
 class LoginViewModel {
-    func retrieveAccountWithUser(user: String, password: String) -> Bool {
-        let credentials = Credentials(username: user, password: password)
-        let acctManager = AccountManager.shared
-        acctManager.credentials = credentials
+    
+    var mode: String?
+    
+    init(mode: String? = nil) {
+        self.mode = mode
+    }
+    
+    func retrieveAccountManager(credentials: Credentials) -> AccountManager {
+        let acctManager = AccountManager(credentials: credentials)
+        return acctManager
+    }
+    
+    func retrieveAccountWithUser(credentials: Credentials) -> Bool {
+        let acctManager = retrieveAccountManager(credentials: credentials)
         if let dict = acctManager.retrieveAccountFromKeyChain() {
             print("Retrieved account user : \(dict)")
             return true
         }
-        
         return false
     }
     
-    func createAccountWith(Username user:String, password: String) -> Bool {
+    func createAccountWith(credentials: Credentials) -> Bool {
         // Create credentials
         // Set the credentials to account manager
         // account manager will store
-        let credentials = Credentials(username: user, password: password)
-        let acctManager = AccountManager.shared
-        acctManager.credentials = credentials
-        
+        let acctManager = retrieveAccountManager(credentials: credentials)
         if let encryptedPass = acctManager.encryptPasswordWithHash() {
             acctManager.storeUserAndRandomHashAndPassInKeychain(encryptedPassword: encryptedPass)
         }

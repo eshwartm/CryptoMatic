@@ -12,9 +12,12 @@ import CryptoSwift
 
 class AccountManager {
     
-    static let shared = AccountManager()
     var credentials: Credentials?
     var randomHash: Data?
+        
+    init(credentials: Credentials? = nil) {
+        self.credentials = credentials
+    }
     
     func encryptPasswordWithHash() -> Data? {
         guard let creds = credentials else {
@@ -70,7 +73,6 @@ class AccountManager {
                 print("Fetched data from keychain : \(jsonDict)")
                 return jsonDict
             }
-            return nil
         }
         return nil
     }
